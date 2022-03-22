@@ -7,14 +7,14 @@ import SignUp from '../components/LoginSectionsty/SignUp'
 
 export default function UnprotectedLayout() {
   return (
-     <div>
-     
-    
-     
+    <div>
 
-     
-     <Outlet/>
-     </div>
-     
+
+
+
+
+      <Outlet />
+    </div>
+
   )
 }

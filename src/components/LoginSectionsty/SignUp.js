@@ -12,14 +12,14 @@ const SignUp = () => {
   const [password, setPassword] = useState();
   const [number, setNumber] = useState();
 
-  
+
 
 
   const handleSubmit = () => {
-    
-    const userData = {firstname,lastname,email,password,number};
-     localStorage.setItem("userData", JSON.stringify(userData));
-    
+
+    const userData = { firstname, lastname, email, password, number };
+    localStorage.setItem("userData", JSON.stringify(userData));
+
 
     // console.warn(firstName, "firstName");
     // const lastName = [];
@@ -37,9 +37,9 @@ const SignUp = () => {
 
   }
 
- 
 
-  
+
+
   const updateData = () => {
 
     if (!firstname && !lastname && !email && !password && !number) {
@@ -77,9 +77,9 @@ const SignUp = () => {
                     <input type="text" placeholder="First Name" value={firstname} onChange={(e) => setFirstName(e.target.value)} />
                     <input type="text" placeholder="Last Name" value={lastname} onChange={(e) => setLastName(e.target.value)} />
                   </div>
-                  <input type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} />
+                  <input type="email" placeholder="Email" name="password" value={email} onChange={(e) => setEmail(e.target.value)} />
                   <div className="top_input">
-                    <input type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} />
+                    <input type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} password />
                     <input type="text" placeholder="Phone Number" value={number} onChange={(e) => setNumber(e.target.value)} />
                   </div>
 

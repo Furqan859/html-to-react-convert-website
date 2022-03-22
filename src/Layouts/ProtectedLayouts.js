@@ -8,7 +8,7 @@ import ContactSection from '../components/contact/ContactSection';
 import ClientSection from '../components/Client/ClientSection';
 import SignUp from '../components/LoginSectionsty/SignUp';
 import ErrorPage from '../pages/ErrorPage';
-import AboutSection  from '../components/About/AboutSection';
+import AboutSection from '../components/About/AboutSection';
 import LoginSection from './../components/LoginSectionsty/LoginSection';
 import Home from '../pages/Home'
 import HeaderSection from '../pages/HeaderSection'
@@ -16,16 +16,16 @@ import HeaderSection from '../pages/HeaderSection'
 
 
 
-export default function ProtectedLayouts({isToggledOn,toggle}) {
+export default function ProtectedLayouts({ isToggledOn, toggle }) {
   return (
-     <div>
-     
-     <HeaderSection isToggledOn={isToggledOn}  toggle={toggle}/>   
-             
+    <div>
+
+      <HeaderSection isToggledOn={isToggledOn} toggle={toggle} />
 
 
-     <Outlet/>
-     </div>
-     
+
+      <Outlet />
+    </div>
+
   )
 }

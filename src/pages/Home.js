@@ -1,4 +1,4 @@
-import React,{useEffect} from 'react';
+import React, { useEffect } from 'react';
 import SliderComponent from '../components/slider/SliderComponent';
 import FeatureSection from '../components/feature/FeatureSection';
 import AboutSection from '../components/About/AboutSection';
@@ -10,24 +10,24 @@ import { Link, useParams, useLocation } from 'react-router-dom';
 
 const Home = () => {
   const location = useLocation();
-  
-  const {state} = useLocation();
-  const {firstname} = state;
-  useEffect( () => {
-        alert(firstname)
+
+  const { state } = useLocation();
+  const { firstname } = state;
+  useEffect(() => {
+    alert(firstname)
   })
-  
+
   return (
     <div>
-<Link to='/home'></Link>
+      <Link to='/home'></Link>
 
 
-    <SliderComponent/>
-    <FeatureSection/>
-    <AboutSection/>
-    <ProductSection/>
-    <ContactSection/>
-<ClientSection/>
+      <SliderComponent />
+      <FeatureSection />
+      <AboutSection />
+      <ProductSection />
+      <ContactSection />
+      <ClientSection />
 
 
 

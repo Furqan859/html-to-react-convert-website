@@ -6,13 +6,13 @@ import Home from './pages/Home';
 import RouteComponent from './RouteComponent';
 
 function App() {
-  
+
   return (<div>
 
     <BrowserRouter>
 
-      
-      
+
+
       <RouteComponent />
 
       <FooterSection />

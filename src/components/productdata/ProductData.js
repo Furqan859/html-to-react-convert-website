@@ -12,35 +12,53 @@ import pro9 from '../../aesets/images/p9.png';
 
 export const ProductsData = [
 
-  
 
-    { name: 'Sport Product',
+
+    {
+        name: 'Sport Product',
         price: 300,
-        image: pro1},
-        { name: 'Sport Product',
+        image: pro1
+    },
+    {
+        name: 'Sport Product',
         price: 300,
-        image: pro2},
-        { name: 'Sport Product',
+        image: pro2
+    },
+    {
+        name: 'Sport Product',
         price: 300,
-        image: pro3},
-        { name: 'Sport Product',
+        image: pro3
+    },
+    {
+        name: 'Sport Product',
         price: 300,
-        image: pro4},
-        { name: 'Sport Product',
+        image: pro4
+    },
+    {
+        name: 'Sport Product',
         price: 300,
-        image: pro5},
-        { name: 'Sport Product',
+        image: pro5
+    },
+    {
+        name: 'Sport Product',
         price: 300,
-        image: pro6},
-        { name: 'Sport Product',
+        image: pro6
+    },
+    {
+        name: 'Sport Product',
         price: 300,
-        image: pro7},
-        { name: 'Sport Product',
+        image: pro7
+    },
+    {
+        name: 'Sport Product',
         price: 300,
-        image: pro8},
-        { name: 'Sport Product',
+        image: pro8
+    },
+    {
+        name: 'Sport Product',
         price: 300,
-        image: pro9}
+        image: pro9
+    }
 
 
 ]

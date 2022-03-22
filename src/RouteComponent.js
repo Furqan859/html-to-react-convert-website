@@ -19,11 +19,11 @@ export default function RouteComponent() {
        const [isToggledOn, setToggle] = React.useState(false)
        const toggle = () => setToggle(!isToggledOn)
 
-       console.warn(isToggledOn,"this is a state value")
+       
      
 
 
-       console.warn(toggle,"this a route toggle")
+       
        return useRoutes([
 
         {   
