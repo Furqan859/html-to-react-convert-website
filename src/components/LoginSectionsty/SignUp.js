@@ -6,35 +6,43 @@ import HeaderSection from '../../pages/HeaderSection';
 const SignUp = () => {
 
   const navigate = useNavigate()
-  const [firstname, setFirstName] = useState("");
-  const [lastname, setLastName] = useState("");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [number, setNumber] = useState("");
+  const [firstname, setFirstName] = useState();
+  const [lastname, setLastName] = useState();
+  const [email, setEmail] = useState();
+  const [password, setPassword] = useState();
+  const [number, setNumber] = useState();
+
+  
 
 
   const handleSubmit = () => {
-    const firstName = [];
-    localStorage.setItem("firstName", JSON.stringify(firstname));
-    console.warn(firstName, "firstName");
-    const lastName = [];
-    localStorage.setItem("lastName", JSON.stringify(lastname));
-    console.warn(lastName, "lastName");
-    const userEmail = [];
-    localStorage.setItem("userEmail", JSON.stringify(email));
-    console.warn(userEmail, "userEmail");
-    const userPassword = [];
-    localStorage.setItem("userPassword", JSON.stringify(password));
-    console.warn(userPassword, "userpassword");
-    const userNumber = [];
-    localStorage.setItem("userNumber", JSON.stringify(number));
-    console.warn(userNumber, "userNumber");
+    
+    const userData = {firstname,lastname,email,password,number};
+     localStorage.setItem("userData", JSON.stringify(userData));
+    
+
+    // console.warn(firstName, "firstName");
+    // const lastName = [];
+    // localStorage.setItem("lastName", JSON.stringify(lastname));
+    // console.warn(lastName, "lastName");
+    // const userEmail = [];
+    // localStorage.setItem("userEmail", JSON.stringify(email));
+    // console.warn(userEmail, "userEmail");
+    // const userPassword = [];
+    // localStorage.setItem("userPassword", JSON.stringify(password));
+    // console.warn(userPassword, "userpassword");
+    // const userNumber = [];
+    // localStorage.setItem("userNumber", JSON.stringify(number));
+    // console.warn(userNumber, "userNumber");
 
   }
 
+ 
+
+  
   const updateData = () => {
 
-    if (!firstname || !lastname || !email || !password || !number) {
+    if (!firstname && !lastname && !email && !password && !number) {
       alert("Invalid Data")
     } else {
       navigate('/login');

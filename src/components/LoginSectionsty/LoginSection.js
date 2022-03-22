@@ -1,29 +1,36 @@
-import React,{useState} from 'react';
+import React,{ useState} from 'react';
 import HeaderSection from '../../pages/HeaderSection';
-
-
-import { useLocation, NavLink, Navigate } from 'react-router-dom';
+import { useLocation, NavLink ,useNavigate } from 'react-router-dom';
 
 
 
 const LoginSection = ({toggle}) => {
 
-const [email , setEmail] = useState("");
-const [password , setPassword] = useState("");
-
  
-const handleSubmit = () => {
-  const userEmail = [];
-    localStorage.setItem("userEmail", JSON.parse(email));
-    console.warn(userEmail, "userEmail");
-    const userPassword = [];
-    localStorage.setItem("userPassword", JSON.parse(password));
-    console.warn(userPassword, "userpassword");
-    
-}
+  const navigate = useNavigate();
 
+  
+  const [email, setEmail] = useState();
+  const [password, setPassword] = useState();
+
+
+  const signupData = JSON.parse(localStorage.getItem('userData'))
+
+
+
+const handleSubmit = () => {
+  if(email == signupData.email && password == signupData.password) {  
+     toggle()
+    navigate('/home',{state:{firstname:signupData.firstname}})
+  }else{
+  alert("User is not Valid");
+  }
+ 
+ 
+ 
+}
   const location = useLocation()
-  console.log(location);
+ 
   
 
 
@@ -54,7 +61,7 @@ const handleSubmit = () => {
                
                 <div className="btn-box">
                 
-                  <button type='submit'   onSubmit={handleSubmit}>
+                  <button type='submit'   onClick={handleSubmit}>
                     Login
                   
                   </button>
